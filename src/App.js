@@ -9,7 +9,7 @@ function App() {
 
   function postAnswer(answer) {
     axios
-      .get(`https://localhost:7013/api/v1/TriviaQuiz/${question.id}-${answer}`)
+      .post(`https://localhost:7013/api/v1/TriviaQuiz/${question.id}-${answer}`)
       .then((resp) => {
         setAnswer(resp.data);
         console.log(resp.data);
